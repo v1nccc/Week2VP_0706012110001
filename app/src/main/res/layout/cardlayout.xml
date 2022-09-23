@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000000">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="411dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gambarhewan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/farmpic" />
+
+            <TextView
+                android:id="@+id/namahewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/gambarhewan"
+                app:layout_constraintTop_toTopOf="@+id/gambarhewan" />
+
+            <TextView
+                android:id="@+id/jenishewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/namahewan"
+                app:layout_constraintTop_toBottomOf="@+id/namahewan" />
+
+            <TextView
+                android:id="@+id/usiahewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/jenishewan"
+                app:layout_constraintTop_toBottomOf="@+id/jenishewan" />
+
+            <Button
+                android:id="@+id/editbutton"
+                android:layout_width="65dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#1E39E9"
+                android:text="Edit"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/gambarhewan"
+                app:layout_constraintStart_toStartOf="@+id/usiahewan"
+                app:layout_constraintTop_toBottomOf="@+id/usiahewan" />
+
+            <Button
+                android:id="@+id/deletebutton"
+                android:layout_width="75dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="130dp"
+                android:backgroundTint="#EC0909"
+                android:text="Delete"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editbutton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editbutton"
+                app:layout_constraintTop_toBottomOf="@+id/usiahewan" />
+
+            <Button
+                android:id="@+id/feedbutton"
+                android:layout_width="87dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="40dp"
+                android:backgroundTint="#2196F3"
+                android:text="Feed"
+                app:layout_constraintStart_toEndOf="@+id/namahewan"
+                app:layout_constraintTop_toTopOf="@+id/namahewan" />
+
+            <Button
+                android:id="@+id/interactbutton"
+                android:layout_width="113dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#FF9800"
+                android:text="Interact"
+                app:layout_constraintStart_toStartOf="@+id/feedbutton"
+                app:layout_constraintTop_toBottomOf="@+id/feedbutton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

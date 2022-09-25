@@ -43,30 +43,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/JenisInput"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
-                android:hint="Jenis"
-                app:layout_constraintEnd_toEndOf="@+id/NamaInput"
-                app:layout_constraintStart_toStartOf="@+id/NamaInput"
-                app:layout_constraintTop_toBottomOf="@+id/NamaInput">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/UsiaInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="15dp"
                 android:hint="Usia"
-                app:layout_constraintEnd_toEndOf="@+id/JenisInput"
-                app:layout_constraintStart_toStartOf="@+id/JenisInput"
-                app:layout_constraintTop_toBottomOf="@+id/JenisInput">
+                app:layout_constraintEnd_toEndOf="@+id/NamaInput"
+                app:layout_constraintStart_toStartOf="@+id/NamaInput"
+                app:layout_constraintTop_toBottomOf="@+id/NamaInput">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -78,7 +62,7 @@
                 android:id="@+id/AddHewanData"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#2F6EEF"
                 android:text="Add"
@@ -86,7 +70,41 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/UsiaInput"
                 app:layout_constraintStart_toStartOf="@+id/UsiaInput"
-                app:layout_constraintTop_toBottomOf="@+id/UsiaInput" />
+                app:layout_constraintTop_toBottomOf="@+id/PemilihanJenis" />
+
+            <RadioGroup
+                android:id="@+id/PemilihanJenis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/UsiaInput"
+                app:layout_constraintTop_toBottomOf="@+id/UsiaInput">
+
+                <RadioButton
+                    android:id="@+id/pilihayam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ayam"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/pilihsapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sapi"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/pilihkambing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kambing"
+                    android:textColor="#FFFFFF" />
+            </RadioGroup>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

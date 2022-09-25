@@ -18,16 +18,23 @@ class HewanListAdapter (val listhewan: ArrayList<Hewan>, val cardListener: CardL
         fun setData(data:Hewan){
             binding.namahewan.text = data.nama
             binding.jenishewan.text = data.jenis
+
             binding.usiahewan.text = "Usia: " + data.usia.toString()
             if(data.imageUri.isNotEmpty()) {
                 binding.gambarhewan.setImageURI(Uri.parse(data.imageUri))
             }
             binding.editbutton.setOnClickListener{
-                cardListener1.onCardClick("edit", adapterPosition)
+                cardListener1.onCardClick("edit", data.id)
             }
 
             binding.deletebutton.setOnClickListener{
-                cardListener1.onCardClick("delete",adapterPosition)
+                cardListener1.onCardClick("delete",data.id)
+            }
+            binding.feedbutton.setOnClickListener{
+                cardListener1.onCardClick("feed",data.id)
+            }
+            binding.interactbutton.setOnClickListener{
+                cardListener1.onCardClick("interact",data.id)
             }
         }
 

@@ -86,18 +86,21 @@
                 android:id="@+id/feedbutton"
                 android:layout_width="87dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="40dp"
+                android:layout_marginEnd="30dp"
                 android:backgroundTint="#2196F3"
                 android:text="Feed"
-                app:layout_constraintStart_toEndOf="@+id/namahewan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/jenishewan"
                 app:layout_constraintTop_toTopOf="@+id/namahewan" />
 
             <Button
                 android:id="@+id/interactbutton"
-                android:layout_width="113dp"
+                android:layout_width="0dp"
                 android:layout_height="37dp"
                 android:backgroundTint="#FF9800"
                 android:text="Interact"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/feedbutton"
                 app:layout_constraintStart_toStartOf="@+id/feedbutton"
                 app:layout_constraintTop_toBottomOf="@+id/feedbutton" />
         </androidx.constraintlayout.widget.ConstraintLayout>
